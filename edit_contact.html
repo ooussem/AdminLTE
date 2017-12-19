@@ -138,7 +138,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-       {Contact.nom Contact.prenom}
+       Edit contact
       </h1>
     </section>
 
@@ -155,47 +155,47 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="box-body">
                         <!-- text input -->
                         <div class="form-group">
-                          <label>First name</label> <h5 class="description-header">${prenom}</h5>
+                          <label>First name</label> <input type="text" class="form-control" value=${prenom}>
                         </div>
 
                         <div class="form-group">
-                            <label>Last name</label><h5 class="description-header">${nom}</h5>
+                            <label>Last name</label><input type="text" class="form-control" value=${nom}>
                         </div>
 
                         <div class="form-group">
-                            <label>Mail</label><h5 class="description-header">${mail}</h5>
+                            <label>Mail</label><input type="text" class="form-control" value=${mail}>
                         </div>
                         
                         <div class="form-group">
-                            <label>Street</label><h5 class="description-header">${street}</h5>
+                            <label>Street</label><input type="text" class="form-control" value=${street}>
                         </div>
                         
                         <div class="form-group">
-                            <label>City</label><h5 class="description-header">${city}</h5>
+                            <label>City</label><input type="text" class="form-control" value=${city}>
                         </div>
                         
                         <div class="form-group">
-                            <label>Country</label><h5 class="description-header">${country}</h5>
+                            <label>Country</label><input type="text" class="form-control" value=${country}>
                         </div>
                         
 
                         <div class="form-group">
-                            <label>Zip</label><h5 class="description-header">${zip}</h5>
-               </div>
+                            <label>Zip</label><input type="text" class="form-control" value=${zip}>
+                        </div>
 
                         <div class="form-group">
                           <p>
 	                        <table class="table table-hover">
-			                    <tr>
-			                      <th><label>Phone Number</label></th>
-			                      <th><label>Phone Kind</label></th>
-			                    </tr>
-			                    <logic:iterate id="phone" name="phones">
-			                    <tr>
-			                    	<td><h5 class="description-header"><bean:write name="phone" property="phoneNumber" /></h5></td>
-									<td><h5 class="description-header"><bean:write name="phone" property="phoneNumber" /></h5></td>
-								</tr>
-								</logic:iterate>
+                            <tr>
+                              <th><label>Phone Number</label></th>
+                              <th><label>Phone Kind</label></th>
+                            </tr>
+                            <logic:iterate id="phone" name="phones">
+                              <tr>
+                                <td><input type="text" class="form-control" value=<bean:write name="phone" property="phoneNumber"> ></td>
+                                <td><input type="text" class="form-control" value=<bean:write name="phone" property="phoneNumber"> ></td>
+                              </tr>
+                            </logic:iterate>
 		                    </table>
                       </div>
 
@@ -213,8 +213,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <!-- text input -->
                       <div class="form-group">
                       <logic:iterate id="group" name="groups">
-							<h5 class="description-header"><bean:write name="group" property="groupName"/></h5>
-						</logic:iterate>	
+                        <input type="text" class="form-control" value=<bean:write name="group" property="groupName">>
+                      </logic:iterate>	
                       </div>
                   </div>
                   <!-- /.box-body -->
@@ -224,7 +224,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
     </section>
 
-
+    <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
